@@ -1,1 +1,68 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway:wght@500&display=swap");
+
+/** Main colors */
+$color-1: #286158;
+$color-2: #f0ddcc;
+
+/** Navbar */
+nav {
+	color: $color-2;
+	background-color: $color-1;
+	width: 100%;
+	height: 4rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.logo {
+		font-size: 1.3rem;
+		margin-bottom: 0;
+	}
+
+	.menu {
+		margin-bottom: 0;
+
+		li {
+			list-style: none;
+			padding: 0 1rem;
+		}
+	}
+
+	.hamburger {
+		z-index: 10;
+	}
+
+	.mobile-menu {
+		width: 100vw;
+		background: rgba(0, 0, 0, 0.5);
+		position: fixed;
+		right: 0;
+		top: 0;
+
+		will-change: transform;
+		transition: all 1s ease-in-out;
+
+		.mobile-container {
+			height: 100vh;
+			width: 600px;
+			background-color: $color-1;
+			float: right;
+			position: relative;
+			padding-top: 5rem;
+
+			li {
+				list-style: none;
+				padding: 1rem;
+			}
+
+			li:not(:last-child) {
+				border-bottom: solid 1px $color-2;
+			}
+		}
+		@media screen and (max-width: 800px) {
+			.mobile-container {
+				width: 100vw;
+			}
+		}
+	}
+}

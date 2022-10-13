@@ -7,7 +7,7 @@ function Navbar() {
 	const handleNav = () => setNav(!nav);
 
 	return (
-		<nav className="fixed-top px-4">
+		<nav className="fixed-top px-4 d-flex justify-content-between align-items-center">
 			<div className="d-md-flex">
 				<p className="logo">CP</p>
 			</div>

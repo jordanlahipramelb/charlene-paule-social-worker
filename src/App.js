@@ -14,7 +14,7 @@ function App() {
 			<Home />
 			<About />
 			<Specialties />
-			{/* <Treatments /> */}
+			<Treatments />
 			{/* <QualificationsFinances /> */}
 			{/* <Contact /> */}
 		</>

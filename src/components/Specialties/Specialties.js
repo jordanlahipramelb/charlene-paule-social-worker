@@ -17,7 +17,7 @@ function Specialties() {
 							<div className="row">
 								<p className="heading">Specialties</p>
 								<p className="subheading">Issues</p>
-								<div className="col">
+								<div className="col-6">
 									<ul>
 										<li>Anger Management</li>
 										<li>Anxiety</li>
@@ -32,7 +32,7 @@ function Specialties() {
 										<li>School Issues</li>
 									</ul>
 								</div>
-								<div className="col">
+								<div className="col-6">
 									<ul>
 										<li>Self Esteem</li>
 										<li>Self-Harming</li>

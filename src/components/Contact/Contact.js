@@ -1,5 +1,5 @@
 import React from "react";
-import CompanyLogo from "../../assets/images/logo.png";
+import img from "../../assets/images/logo.png";
 
 function Contact() {
 	return (
@@ -9,7 +9,7 @@ function Contact() {
 				<div className="contact-form">
 					<form className="row">
 						<div
-							className="col-md-6"
+							className=""
 							data-aos="fade-up"
 							data-aos-offset="200"
 							data-aos-delay="50"
@@ -23,50 +23,53 @@ function Contact() {
 							/>
 						</div>
 						<div
-							className="col-md-6"
+							className=""
 							data-aos="fade-up"
 							data-aos-offset="200"
 							data-aos-delay="50"
 						>
 							<input
-								placeholder="Subject"
+								placeholder="Your Email"
 								type="text"
-								name="subject"
+								name="email"
 								className="form-control"
 								required
 							/>
 						</div>
 						<div
-							className="col-12"
+							className=""
 							data-aos="fade-up"
 							data-aos-offset="200"
 							data-aos-delay="50"
 						>
 							<input
-								type="email"
-								name="email"
-								placeholder="Email"
+								type="number"
+								name="number"
+								placeholder="Your Phone Number; Format: 123-456-7890"
 								className="form-control"
 								required
 							/>
 						</div>
 						<div
-							className="col-12"
+							className=""
 							data-aos="fade-up"
 							data-aos-offset="200"
 							data-aos-delay="50"
 						>
 							<textarea
-								placeholder="Message"
+								placeholder="Tell me why you are seeking help?"
 								name="message"
 								className="form-control"
 								required
 							/>
 						</div>
 						<div className="col-12">
-							<input type="submit" className="flat-button" value="SEND" />
+							<input type="submit" className="button-2" value="SEND" />
 						</div>
 					</form>
+				</div>
+				<div className="logo">
+					<img src={img} alt="compnay-logo" />
 				</div>
 			</div>
 		</div>

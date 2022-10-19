@@ -1,21 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
 import img from "../../assets/images/happy.svg";
 
 function Specialties() {
+	useEffect(() => {
+		AOS.init({ duration: 2000, once: true });
+	}, []);
+
 	return (
-		<div className="specialties-page">
+		<div name="specialties" className="specialties-page">
 			<div className="container">
 				<div className="row">
-					<div className="col text-center">
+					<div
+						className="col text-center"
+						data-aos="fade-up"
+						data-aos-delay="200"
+						data-aos-once="true"
+					>
 						<img src={img} className="mb-4" />
 					</div>
 				</div>
 
 				<div className="row">
 					<div className="col-md-6 col-lg-6">
-						<div className="specialties">
+						<div
+							className="specialties"
+							data-aos="fade-up"
+							data-aos-delay="400"
+							data-aos-once="true"
+						>
 							<div className="row">
-								<p className="heading">Specialties</p>
+								<p className="title">Specialties</p>
 								<p className="subheading">Issues</p>
 								<div className="col-6">
 									<ul>
@@ -64,9 +79,14 @@ function Specialties() {
 					</div>
 
 					<div className="col-md-6 col-lg-6">
-						<div className="client-focus">
+						<div
+							className="client-focus"
+							data-aos="fade-up"
+							data-aos-delay="600"
+							data-aos-once="true"
+						>
 							<div className="row">
-								<p className="heading">Client Focus</p>
+								<p className="title">Client Focus</p>
 
 								<div className="col">
 									<p className="subheading">Age</p>

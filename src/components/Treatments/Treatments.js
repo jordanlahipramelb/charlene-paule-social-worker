@@ -1,18 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
 import img from "../../assets/images/hands.avif";
 
 function Treatments() {
+	useEffect(() => {
+		AOS.init({ duration: 2000, once: true });
+	}, []);
+
 	return (
-		<div className="treatments-page">
+		<div name="treatments" className="treatments-page">
 			<div className="container">
 				<div className="row">
-					<div className="col text-center">
+					<div
+						className="col text-center"
+						data-aos="fade-up"
+						data-aos-delay="200"
+						data-aos-once="true"
+					>
 						<p className="title mb-4">Treatment Approach</p>
 					</div>
 				</div>
 				<div className="row">
 					<div className="col-xs-12 col-md-6">
-						<div className="treatments-left">
+						<div
+							className="treatments-left"
+							data-aos="fade-up"
+							data-aos-delay="400"
+							data-aos-once="true"
+						>
 							<p className="heading">Types of Therapy</p>
 							<ul>
 								<li>Acceptance and Commitment (ACT)</li>
@@ -37,7 +52,12 @@ function Treatments() {
 					</div>
 
 					<div className="col-xs-12 col-md-6">
-						<div className="treatments-right text-center">
+						<div
+							className="treatments-right text-center"
+							data-aos="fade-up"
+							data-aos-delay="600"
+							data-aos-once="true"
+						>
 							<img src={img} />
 						</div>
 					</div>

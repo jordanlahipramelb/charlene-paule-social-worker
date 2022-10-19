@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corinthia&family=Poppins:wght@500&family=Raleway:wght@500&display=swap");
 
 /** Main colors */
 $color-1: #286158;
@@ -17,12 +17,23 @@ nav {
 		margin-bottom: 0;
 	}
 
+	a {
+		text-decoration: none;
+		padding: 0 1rem;
+		color: $color-2 !important;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
 	.menu {
 		margin-bottom: 0;
 
-		li {
-			list-style: none;
-			padding: 0 1rem;
+		a.active,
+		a:hover,
+		a:focus {
+			border-bottom: 0.15rem solid $color-2;
 		}
 	}
 
@@ -48,12 +59,13 @@ nav {
 			position: relative;
 			padding-top: 5rem;
 
-			li {
+			a {
+				display: block;
 				list-style: none;
 				padding: 1rem;
 			}
 
-			li:not(:last-child) {
+			a:not(:last-child) {
 				border-bottom: solid 1px $color-2;
 			}
 		}
@@ -75,6 +87,11 @@ nav {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+
+	h1 {
+		font-family: "Corinthia", cursive;
+		font-size: 3rem;
+	}
 
 	img {
 		border-radius: 30px;
@@ -106,7 +123,7 @@ nav {
 	justify-content: center;
 
 	.title {
-		font-size: 3rem;
+		font-size: 4rem;
 		letter-spacing: 4px;
 	}
 
@@ -155,8 +172,14 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 
-	.heading {
-		font-size: 1.5rem;
+	.container {
+		padding-left: 4rem;
+		padding-right: 4rem;
+	}
+
+	.title {
+		font-size: 3rem;
+
 		letter-spacing: 3px;
 	}
 
@@ -174,7 +197,7 @@ nav {
 			width: 200px;
 		}
 
-		.heading {
+		.title {
 			font-size: 1.4rem;
 			letter-spacing: 3px;
 		}
@@ -189,10 +212,10 @@ nav {
 		}
 	}
 
-	@media screen and (min-width: 1023px) {
+	@media screen and (max-width: 1023px) {
 		.container {
-			padding-left: 4rem;
-			padding-right: 4rem;
+			padding-left: 1rem;
+			padding-right: 1rem;
 		}
 	}
 }
@@ -207,8 +230,13 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 
+	.container {
+		padding: 5rem;
+	}
+
 	.title {
-		font-size: 2.5rem;
+		font-size: 4rem;
+
 		letter-spacing: 4px;
 	}
 
@@ -222,47 +250,47 @@ nav {
 	}
 
 	img {
-		width: 300px;
+		width: 450px;
 		border-radius: 20px;
 	}
 
 	@media screen and (max-width: 767px) {
 		font-size: 0.9rem;
+
 		.treatments-right {
 			padding: 0 0;
 		}
 
 		.title {
-			font-size: 1.5rem;
+			font-size: 2.5rem;
 		}
 		.heading {
 			font-size: 1.1rem;
 			letter-spacing: 3px;
 		}
 		img {
+			width: 300px;
 			padding: 0;
 		}
-	}
-
-	@media screen and (max-width: 767px) and (min-width: 1023px) {
-		img {
-			width: 400px;
+		li {
+			line-height: 1.2rem;
 		}
-	}
 
-	@media screen and (min-width: 1023px) {
 		.container {
-			padding: 5rem;
+			padding: 3rem;
 		}
+	}
 
+	@media screen and (max-width: 1023px) {
 		img {
-			width: 450px;
+			width: 300px;
 		}
 	}
 }
 /** Qualifications/Finances */
 
 .qualifications-finances-page {
+	font-size: 0.9rem;
 	background-color: $color-2;
 	color: $color-1;
 	width: 100%;
@@ -276,13 +304,18 @@ nav {
 	}
 
 	.title {
-		font-size: 2rem;
+		font-size: 3rem;
 		letter-spacing: 4px;
+		margin-bottom: 0px;
 	}
 
 	.heading {
 		font-size: 1.3rem;
 		letter-spacing: 2px;
+	}
+
+	li {
+		line-height: 1.2rem;
 	}
 
 	@media screen and (max-width: 767px) {
@@ -291,7 +324,7 @@ nav {
 		}
 
 		.title {
-			font-size: 1.4rem;
+			font-size: 2.4rem;
 			letter-spacing: 3px;
 		}
 
@@ -316,8 +349,114 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 
+	.title {
+		font-size: 4rem;
+		letter-spacing: 4px;
+	}
+
+	.heading {
+		font-size: 1.3rem;
+		letter-spacing: 2px;
+		margin-bottom: 0;
+	}
+
 	img {
 		width: 400px;
+	}
+
+	input,
+	textarea {
+		margin-bottom: 5px;
+		clear: both;
+	}
+
+	input:not(input[type="submit"]) {
+		border: 0;
+		height: 50px;
+		background: $color-2;
+		color: $color-1;
+		padding: 20px;
+	}
+
+	textarea {
+		border: 0;
+		background: $color-2;
+		height: 7rem;
+		font-size: 16px;
+		color: $color-1;
+		padding: 20px;
+		min-height: 150px;
+		box-sizing: border-box;
+	}
+
+	.company {
+		p:not(:first-of-type) {
+			margin: 0;
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		.title {
+			letter-spacing: 3px;
+		}
+
+		.heading {
+			font-size: 1.5rem;
+			letter-spacing: 2px;
+		}
+
+		img {
+			width: 300px;
+		}
+
+		input,
+		textarea {
+			margin-bottom: 5px;
+		}
+
+		input:not(input[type="submit"]) {
+			height: 30px;
+			padding: 10px;
+		}
+
+		textarea {
+			border: 0;
+			height: 7rem;
+			padding: 10px;
+			min-height: 100px;
+		}
+	}
+
+	@media screen and (max-width: 1023px) {
+		.title {
+			font-size: 3.5rem;
+			letter-spacing: 4px;
+		}
+
+		img {
+			width: 300px;
+		}
+
+		p:not(:first-of-type) {
+			font-size: 0.8rem;
+		}
+
+		input,
+		textarea {
+			margin-bottom: 5px;
+		}
+
+		input:not(input[type="submit"]) {
+			height: 30px;
+			padding: 10px;
+		}
+
+		textarea {
+			border: 0;
+			height: 7rem;
+			padding: 10px;
+			min-height: 100px;
+		}
 	}
 }
 
@@ -361,4 +500,8 @@ nav {
 		background: $color-1;
 		color: $color-2;
 	}
+}
+
+.title {
+	font-family: "Corinthia", cursive;
 }

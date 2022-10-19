@@ -19,22 +19,108 @@ function Navbar() {
 
 			{/* Menu */}
 			<ul className="menu d-none d-md-flex">
-				<li>Home</li>
-				<li>About Me</li>
-				<li>Specialties</li>
-				<li>Treatments</li>
-				<li>Contact</li>
+				<Link to="home" spy={true} smooth={true} offset={50} duration={300}>
+					Home
+				</Link>
+				<Link to="about" spy={true} smooth={true} offset={50} duration={300}>
+					About Me
+				</Link>
+				<Link
+					to="specialties"
+					spy={true}
+					smooth={true}
+					offset={50}
+					duration={300}
+				>
+					Specialties
+				</Link>
+				<Link
+					to="treatments"
+					spy={true}
+					smooth={true}
+					offset={50}
+					duration={300}
+				>
+					Treatments
+				</Link>
+				<Link
+					to="qualifications-finances"
+					spy={true}
+					smooth={true}
+					offset={50}
+					duration={300}
+				>
+					Finances
+				</Link>
+				<Link to="contact" spy={true} smooth={true} offset={50} duration={300}>
+					Contact
+				</Link>
 			</ul>
 
 			{/* Mobile Menu */}
 			<div className={!nav ? "d-none" : "mobile-menu"} onClick={handleNav}>
 				<div className="mobile-container">
 					<ul>
-						<li>HOME</li>
-						<li>ABOUT ME</li>
-						<li>SPECIALTIES</li>
-						<li>TREATMENTS</li>
-						<li>CONTACT</li>
+						<Link
+							to="home"
+							spy={true}
+							smooth={true}
+							offset={15}
+							duration={300}
+							onClick={handleNav}
+						>
+							Home
+						</Link>
+						<Link
+							to="about"
+							spy={true}
+							smooth={true}
+							offset={5}
+							duration={300}
+							onClick={handleNav}
+						>
+							About Me
+						</Link>
+						<Link
+							to="specialties"
+							spy={true}
+							smooth={true}
+							offset={5}
+							duration={300}
+							onClick={handleNav}
+						>
+							Specialties
+						</Link>
+						<Link
+							to="treatments"
+							spy={true}
+							smooth={true}
+							offset={5}
+							duration={300}
+							onClick={handleNav}
+						>
+							Treatments
+						</Link>
+						<Link
+							to="qualifications-finances"
+							spy={true}
+							smooth={true}
+							offset={5}
+							duration={300}
+							onClick={handleNav}
+						>
+							Finances
+						</Link>
+						<Link
+							to="contact"
+							spy={true}
+							smooth={true}
+							offset={5}
+							duration={300}
+							onClick={handleNav}
+						>
+							Contact
+						</Link>
 					</ul>
 				</div>
 			</div>

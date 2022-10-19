@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
 import img from "../../assets/images/meeting.svg";
 
 function QualificationsFinances() {
+	useEffect(() => {
+		AOS.init({ duration: 2000, once: true });
+	}, []);
+
 	return (
-		<div className="qualifications-finances-page">
+		<div
+			name="qualifications-finances"
+			className="qualifications-finances-page"
+		>
 			<div className="container">
 				<div className="clearfix">
-					<div className="qualifications">
+					<div
+						className="qualifications"
+						data-aos="fade-up"
+						data-aos-delay="200"
+						data-aos-once="true"
+					>
 						<p className="title">Qualifications</p>
 						<ul>
 							<li>Years in Practice: 3 Years</li>
@@ -15,11 +28,21 @@ function QualificationsFinances() {
 							<li>Year Graduated: 2019</li>
 						</ul>
 					</div>
-					<div className="image text-center">
+					<div
+						className="image text-center"
+						data-aos="fade-up"
+						data-aos-delay="400"
+						data-aos-once="true"
+					>
 						<img src={img} class="col-md-6 float-md-end mb-3 ms-md-3" />
 					</div>
 
-					<div className="finances">
+					<div
+						className="finances"
+						data-aos="fade-up"
+						data-aos-delay="600"
+						data-aos-once="true"
+					>
 						<p className="title">Finances</p>
 						<p className="heading">Office</p>
 						<ul>

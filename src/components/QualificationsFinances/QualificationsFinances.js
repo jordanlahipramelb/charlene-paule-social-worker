@@ -62,7 +62,7 @@ function QualificationsFinances() {
 							</li>
 						</ul>
 
-						<p className="heading">Accepted Insurance Plans</p>
+						<p className="heading">Accepted Insurance Plans</p>rrrrrrrrrrrrrrrrrr
 						<ul>
 							<li>Anthem</li>
 							<li>BlueCross and BlueShield</li>
